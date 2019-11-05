@@ -46,7 +46,7 @@
       <change afterPath="$PROJECT_DIR$/../My Full Projects/Translation/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../My Full Projects/Translation/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../My Full Projects/Translation/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Prediction/.idea/Prediction.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Seven-Wonders-Of-The-World-Flask--master/.idea/Flask.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Seven-Wonders-Of-The-World-Flask--master/.idea/misc.xml" beforeDir="false" />
@@ -602,8 +602,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CurrencyRatesAPI/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+            <state relative-caret-position="261">
+              <caret line="42" column="1" lean-forward="true" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
               <folding>
                 <element signature="e#317#326#0" expanded="true" />
               </folding>
@@ -645,7 +645,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="15" />
     <option name="y" value="30" />
     <option name="width" value="1890" />
@@ -738,15 +738,16 @@
       <option name="presentableId" value="Default" />
       <updated>1572934142299</updated>
       <workItem from="1572934146520" duration="1506000" />
-      <workItem from="1572936280142" duration="1353000" />
+      <workItem from="1572936280142" duration="1608000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2859000" />
+    <option name="totallyTimeSpent" value="3114000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25383994" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -857,8 +858,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CurrencyRatesAPI/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+        <state relative-caret-position="261">
+          <caret line="42" column="1" lean-forward="true" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
           <folding>
             <element signature="e#317#326#0" expanded="true" />
           </folding>
