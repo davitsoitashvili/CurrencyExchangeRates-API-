@@ -69,8 +69,6 @@ def Procredit_Bank():
 
 
 
-
-
 class CurrencyRatesList(APIView):
 
     def get(self, request):
