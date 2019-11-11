@@ -10,32 +10,48 @@ def VTB_Bank():
     url = requests.get("https://vtb.ge/en/individuals/exchange-rates")
     soup = BeautifulSoup(url.content, "html.parser")
     USD = soup.find_all("tr")[1]
-    info = {}
-    Price_result = []
-    for item in USD:
-        for result in item:
-            if result.isdigit:
-                Price_result.append(result)
+    EUR = soup.find_all('tr')[7]
 
-    BuyUSD = Price_result[-2]
-    SellUSD = Price_result[-4]
+    USD_Rates = []
+    EUR_Rates = []
+    for usd_Item in USD:
+        for usd_Rate in usd_Item:
+            if usd_Rate.isdigit:
+                USD_Rates.append(usd_Rate)
 
-    VTB_Rates = CurrencyRates(id = 1,bank_name="VTB Bank", buy_USD=BuyUSD, sell_USD=SellUSD).save()
+    for eur_item in EUR:
+        for eur_Rate in eur_item:
+            if usd_Rate.isdigit:
+                EUR_Rates.append(eur_Rate)
+
+    BuyUSD = USD_Rates[-2]
+    SellUSD = USD_Rates[-4]
+
+    BuyEUR = EUR_Rates[-2]
+    SellEUR = EUR_Rates[-4]
+
+
+    VTB_Rates = CurrencyRates(id = 1,bank_name="VTB Bank", buy_USD=BuyUSD, sell_USD=SellUSD, sell_EUR=SellEUR,buy_EUR=BuyEUR).save()
 
 
 def TBC_Bank():
     url = requests.get('http://www.tbcbank.ge/web/en/exchange-rates')
     soup = BeautifulSoup(url.content, 'html.parser')
-    valute = soup.find_all('div', class_='currRate')
+    rates = soup.find_all('div', class_='currRate')
 
-    info = {}
-    array_of_valute = [price.get_text()[8:] for price in valute]
-    USD_GEL = [float(array_of_valute[0]), float(array_of_valute[1])]
+    array_of_usd_rates = [usd.get_text()[8:] for usd in rates]
+    array_of_eur_rates = [eur.get_text()[8:] for eur in rates]
 
-    BuyUSD = USD_GEL[1]
-    SellUSD = USD_GEL[0]
+    USD_Rates = [float(array_of_usd_rates[0]), float(array_of_usd_rates[1])]
+    EUR_Rates = [float(array_of_eur_rates[2]), float(array_of_eur_rates[3])]
 
-    TBC_Rates = CurrencyRates(id=2, bank_name="TBC Bank", buy_USD=BuyUSD, sell_USD=SellUSD).save()
+    BuyUSD = USD_Rates[1]
+    SellUSD = USD_Rates[0]
+
+    BuyEUR = EUR_Rates[1]
+    SellEUR = EUR_Rates[0]
+
+    TBC_Rates = CurrencyRates(id=2, bank_name="TBC Bank", buy_USD=BuyUSD, sell_USD=SellUSD,sell_EUR=SellEUR,buy_EUR=BuyEUR).save()
 
 
 def Procredit_Bank():
@@ -45,7 +61,10 @@ def Procredit_Bank():
     BuyUSD = float(soup_procredit_bank.find_all('div', class_='exchange-sell')[0].get_text()[37:])
     SellUSD = float(soup_procredit_bank.find_all('div', class_='exchange-buy')[0].get_text()[37:])
 
-    Procredit_Rates = CurrencyRates(id=3, bank_name="Procredit Bank",buy_USD=BuyUSD,sell_USD=SellUSD).save()
+    BuyEUR = float(soup_procredit_bank.find_all('div', class_='exchange-sell')[1].get_text()[37:])
+    SellEUR = float(soup_procredit_bank.find_all('div', class_='exchange-buy')[1].get_text()[37:])
+
+    Procredit_Rates = CurrencyRates(id=3, bank_name="Procredit Bank",buy_USD=BuyUSD,sell_USD=SellUSD,sell_EUR=SellEUR, buy_EUR=BuyEUR).save()
 
 
 VTB_Bank()
