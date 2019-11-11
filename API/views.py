@@ -67,7 +67,9 @@ def Procredit_Bank():
     Procredit_Rates = CurrencyRates(id=3, bank_name="Procredit Bank",buy_USD=BuyUSD,sell_USD=SellUSD,sell_EUR=SellEUR, buy_EUR=BuyEUR).save()
 
 
-
+VTB_Bank()
+TBC_Bank()
+Procredit_Bank()
 
 
 
