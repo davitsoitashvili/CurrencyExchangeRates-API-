@@ -21,7 +21,7 @@ def VTB_Bank():
 
     for eur_item in EUR:
         for eur_Rate in eur_item:
-            if usd_Rate.isdigit:
+            if eur_Rate.isdigit:
                 EUR_Rates.append(eur_Rate)
 
     BuyUSD = USD_Rates[-2]
