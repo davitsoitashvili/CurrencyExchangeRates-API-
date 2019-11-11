@@ -10,12 +10,6 @@
       <change afterPath="$PROJECT_DIR$/../My Full Projects/Translation/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../My Full Projects/Translation/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../My Full Projects/Translation/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Prediction/.idea/Prediction.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Seven-Wonders-Of-The-World-Flask--master/.idea/Flask.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Seven-Wonders-Of-The-World-Flask--master/.idea/misc.xml" beforeDir="false" />
@@ -703,16 +697,15 @@
       <workItem from="1572934146520" duration="1506000" />
       <workItem from="1572936280142" duration="2158000" />
       <workItem from="1573486915770" duration="1258000" />
-      <workItem from="1573488661122" duration="498000" />
+      <workItem from="1573488661122" duration="913000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5420000" />
+    <option name="totallyTimeSpent" value="5835000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.261924" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
