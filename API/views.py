@@ -88,20 +88,29 @@ Georgian_Bank()
 
 
 class CurrencyRatesList(APIView):
-
-    def get(self, request):
-        Rates = CurrencyRates.objects.all()
-        Serializer = CurrencyRatesSerializer(Rates, many=True)
-        return Response(Serializer.data)
+    def get(self, request,id=None):
+        if id == None:
+            Rates = CurrencyRates.objects.all()
+            Serializer = CurrencyRatesSerializer(Rates, many=True)
+            return Response(Serializer.data)
+        else:
+            Rate = CurrencyRates.objects.get(id=id)
+            Serializer = CurrencyRatesSerializer(Rate)
+            return Response(Serializer.data)
 
     def post(self, request):
         pass
 
 class BankNamesList(APIView):
-    def get(self,request):
-        Names = BankNames.objects.all()
-        NamesSerializer = BankNamesSerializer(Names, many=True)
-        return Response(NamesSerializer.data)
+    def get(self,request,id=None):
+        if id==None:
+            Names = BankNames.objects.all()
+            NamesSerializer = BankNamesSerializer(Names,many=True)
+            return Response(NamesSerializer.data)
+        else:
+            Names = BankNames.objects.get(id=id)
+            NamesSerializer = BankNamesSerializer(Names)
+            return Response(NamesSerializer.data)
 
     def post(self, request):
         pass

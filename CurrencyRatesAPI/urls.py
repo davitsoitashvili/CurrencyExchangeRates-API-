@@ -20,5 +20,7 @@ from API.views import CurrencyRatesList,BankNamesList
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', CurrencyRatesList.as_view()),
-    path('banknames/',BankNamesList.as_view()),
+    path('<int:id>/', CurrencyRatesList.as_view()),
+    path('banknames/', BankNamesList.as_view()),
+    path('banknames/<int:id>/',BankNamesList.as_view()),
 ]
