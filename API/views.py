@@ -6,7 +6,6 @@ from rest_framework.views import APIView
 import requests
 from bs4 import BeautifulSoup
 
-
 def VTB_Bank():
     url = requests.get("https://vtb.ge/en/individuals/exchange-rates")
     soup = BeautifulSoup(url.content, "html.parser")
@@ -70,22 +69,9 @@ def Procredit_Bank():
     CurrencyRates(id=3,buy_USD=BuyUSD,sell_USD=SellUSD,sell_EUR=SellEUR, buy_EUR=BuyEUR).save()
 
 
-def Georgian_Bank():
-    url = requests.get("https://bankofgeorgia.ge/wealth/en/Treasury-operations/exchange-rates")
-    soup = BeautifulSoup(url.content, "html.parser")
-    BuyUSD = soup.find_all("td")[9].text.strip()
-    SellUSD = soup.find_all("td")[8].text.strip()
-    BuyEUR = soup.find_all("td")[14].text.strip()
-    SellEUR = soup.find_all("td")[13].text.strip()
-
-    BankNames(id=4,bank_name="Bank of Georgia", image_url="https://bm.ge/uploads/news/5b053053866f0.png").save()
-    CurrencyRates(id=4, buy_USD=BuyUSD, sell_USD=SellUSD,buy_EUR=BuyEUR,sell_EUR=SellEUR).save()
-
 VTB_Bank()
 TBC_Bank()
 Procredit_Bank()
-Georgian_Bank()
-
 
 class CurrencyRatesList(APIView):
     def get(self, request,id=None):
